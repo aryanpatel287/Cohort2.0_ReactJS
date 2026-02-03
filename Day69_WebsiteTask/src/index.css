@@ -1,0 +1,49 @@
+:root {
+    /* Colors */
+    --color-midnight: #0D1A2D;
+    --color-sky: #2EB9FF;
+    --color-slate: #667186;
+    --color-frost: #F7FCFF;
+    --color-white: #FFFFFF;
+
+    /* Typography */
+    --font-main: "Urbanist", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0 1rem;
+    font-family: var(--font-main);
+}
+
+.homepage-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.btn {
+    background-color: var(--color-midnight);
+    border-radius: 15px;
+    padding: 10px;
+    color: var(--color-frost);
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.btn:active {
+    scale: 0.95;
+}

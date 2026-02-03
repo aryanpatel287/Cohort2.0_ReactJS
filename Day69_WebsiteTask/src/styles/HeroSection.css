@@ -1,0 +1,94 @@
+@import url(../index.css);
+
+.hero-wrapper {
+    /* border: 1px solid ; */
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 20px;
+    background-image: url(../assets/Gemini_Generated_Image_d8bdhqd8bdhqd8bd.png);
+    background-size: cover;
+    background-position: top 30% left 50%;
+    position: relative;
+    color: var(--color-white);
+}
+
+.hero-text {
+    width: 60vw;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.hero-description {
+    width: 40vw;
+    font-size: 1rem;
+    text-align: center;
+    margin: -0.5rem;
+}
+
+.coaches-overview {
+    position: absolute;
+    bottom: 2rem;
+    left: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+
+}
+
+.coaches-overview>span {
+    font-size: 1rem;
+    display: block;
+    width: 210px;
+}
+
+.coaches {
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.221);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.coaches img {
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-left: -10px;
+    object-fit: cover;
+}
+
+.coaches img:first-child {
+    margin-left: 0;
+}
+
+.social-links {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-links span a {
+color: white;
+text-decoration: none;
+}.social-links span a:hover {
+    text-decoration: underline 1px rgba(255, 255, 255, 0.463);
+color: white;
+}
+
+.social-links span i {
+    font-weight: 200;
+}

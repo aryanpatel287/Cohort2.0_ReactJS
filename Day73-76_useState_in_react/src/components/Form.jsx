@@ -11,8 +11,13 @@ const Form = ({ userDetails, setUserDetails }) => {
     function handleSubmit(e) {
         e.preventDefault()
         const newUser = { userName, userEmail, userPhone }
-        setUserDetails(prevDetails => [...prevDetails, newUser])
-        console.log(userDetails)
+        const oldUsers = [...userDetails]
+        oldUsers.push(newUser)
+        setUserDetails(oldUsers)
+        console.log(newUser)
+
+        localStorage.setItem('userDetails',JSON.stringify(oldUsers))
+
         setUserName('')
         setUserEmail('')
         setUserPhone('')

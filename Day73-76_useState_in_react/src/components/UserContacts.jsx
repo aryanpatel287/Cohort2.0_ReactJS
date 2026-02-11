@@ -2,12 +2,15 @@ import React, { useState } from 'react'
 import Form from './Form'
 
 const UserContacts = () => {
-    const [userDetails, setUserDetails] = useState([])
+
+    const localData = JSON.parse(localStorage.getItem('userDetails')) || []
+    const [userDetails, setUserDetails] = useState(localData)
 
     function deleteHandler(index) {
         const copyUsers=[...userDetails]
         copyUsers.splice(index,1)
         setUserDetails(copyUsers)
+        localStorage.setItem('userDetails', JSON.stringify(copyUsers))
     }
     
     return (

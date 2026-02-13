@@ -1,0 +1,100 @@
+.todo-list-wrapper {
+    width: 40%;
+    height: 60%;
+    border-radius: 20px;
+}
+
+.glass-effect {
+    background: hsl(0, 0, 100%, 0.2);
+    backdrop-filter: blur(2px);
+    box-shadow: inset 0 0 8px 1px hsl(0, 0, 100%, 0.2);
+    border: 3px solid hsla(0, 0%, 100%, 0.027);
+}
+
+input:focus {
+    outline: none;
+    border: 3px solid hsla(0, 0%, 100%, 0.027);
+}
+
+.task-card:hover {
+    background: hsl(0, 0, 100%, 0.2);
+}
+
+.card-delete {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+
+}
+
+.task-card:hover .card-delete {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.task-card {
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.task-card:hover {
+    background: hsl(0, 0, 100%, 0.3);
+    transform: translateY(-2px) scale(1.01);
+    box-shadow:
+        inset 0 0 10px 1px hsl(0, 0, 100%, 0.25),
+        0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.task-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+    background: #88888822;
+    border-radius: 10px;
+}
+
+.task-list::-webkit-scrollbar-thumb:hover {
+    background: #8888883e;
+}
+
+/* Custom Checkbox Styling */
+.custom-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    background: hsl(0, 0, 100%, 0.15);
+    backdrop-filter: blur(2px);
+    border: 2px solid hsla(0, 0%, 100%, 0.3);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.custom-checkbox:hover {
+    background: hsl(0, 0, 100%, 0.25);
+    border-color: hsla(0, 0%, 100%, 0.5);
+    transform: scale(1.05);
+}
+
+.custom-checkbox:checked {
+    background: #19BE9A;
+}
+
+.custom-checkbox:checked::after {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.custom-checkbox:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px hsla(0, 0%, 100%, 0.2);
+}

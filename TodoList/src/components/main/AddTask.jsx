@@ -8,11 +8,12 @@ const AddTask = ({ allTasks, setAllTasks }) => {
         const newTask = { description: task, isCompleted: false }
         setAllTasks(prev => [...prev, newTask])
         setTask('')
+        localStorage.setItem('allTasks',JSON.stringify(allTasks))
     }
     return (
         <div>
             <form
-                className='w-full h-12 flex items-center justify-center gap-3'
+                className='w-full flex items-center justify-center gap-3 flex-col md:flex-row'
                 onSubmit={(e) => { handleSubmit(e) }}
             >
                 <input
@@ -20,10 +21,11 @@ const AddTask = ({ allTasks, setAllTasks }) => {
                     name='task'
                     id='task'
                     value={task}
+                    required
                     onChange={(e) => setTask(e.target.value)}
-                    className='glass-effect px-2 py-1 rounded-xl'
+                    className='glass-effect px-2 py-1 rounded-xl w-full md:flex-1'
                 />
-                <button type="submit" className='glass-effect px-2 py-1 rounded-xl active:scale-95 cursor-pointer'>
+                <button type="submit" className='glass-effect px-2 py-1 rounded-xl active:scale-95 cursor-pointer w-10/12 md:w-fit'>
                     Add Task
                 </button>
 

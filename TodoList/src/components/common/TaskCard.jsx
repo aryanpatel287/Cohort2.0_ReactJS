@@ -27,7 +27,7 @@ const TaskCard = ({ idx, description, isCompleted, allTasks, setAllTasks }) => {
                 onChange={taskCompletion}
                 className="custom-checkbox"
             />
-            <p>{description}</p>
+            <p className={isCompleted?'line-through text-[#ffffff66]':''}>{description}</p>
             <ListX
                 size={20}
                 color="#ef4444"

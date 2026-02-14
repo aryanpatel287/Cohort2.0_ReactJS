@@ -34,7 +34,6 @@ input:focus {
 
 .task-card {
     transition: all 0.25s ease;
-    cursor: pointer;
 }
 
 .task-card:hover {
@@ -80,11 +79,10 @@ input:focus {
 }
 
 .custom-checkbox:checked {
-    background: #19BE9A;
+    background: hsla(0, 0%, 100%, 0.25);
 }
 
 .custom-checkbox:checked::after {
-    content: '✓';
     position: absolute;
     color: white;
     font-size: 14px;
@@ -97,4 +95,29 @@ input:focus {
 .custom-checkbox:focus {
     outline: none;
     box-shadow: 0 0 0 3px hsla(0, 0%, 100%, 0.2);
+}
+
+.task-list-dropdown{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+.task-list-dropdown.list-active{
+    opacity: 1;
+    max-height: 10000px;
+    transform: translateY(0);
+}
+
+
+@media (max-width:800px) {
+    .todo-list-wrapper{
+        width: 80%;
+        height: 80%;
+    }
 }
